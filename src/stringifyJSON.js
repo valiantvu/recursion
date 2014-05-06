@@ -3,5 +3,9 @@
 
 // but you don't so you're going to write it from scratch:
 var stringifyJSON = function(obj) {
-  // your code goes here
-};
+	var stringObj = "{";
+	for (var key in obj){
+		stringObj += "'" + key + "': " + obj[key] + ",";
+	}
+	return stringObj.slice(0, -1) + "}";
+}
